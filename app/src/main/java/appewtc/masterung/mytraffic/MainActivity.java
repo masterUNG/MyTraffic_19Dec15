@@ -1,6 +1,8 @@
 package appewtc.masterung.mytraffic;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -36,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 //Sound Effect
                 MediaPlayer buttonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_long);
                 buttonMediaPlayer.start();
+
+                //Intent To WebView
+                Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                objIntent.setData(Uri.parse("https://youtu.be/AFmWqLIqDZA"));
+                startActivity(objIntent);
 
             }   // event
         });
